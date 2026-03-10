@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Notion-style colors */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f7f7f5;
+  --color-bg-hover: #efefef;
+  --color-border: #e3e3e1;
+  --color-text: #191919;
+  --color-text-secondary: #6b6b6b;
+  --color-text-muted: #9b9a97;
+  --color-accent: #2eaadc;
+  
+  /* Easing functions */
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+  border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Hover transitions following animation rules */
+.hover-transition {
+  transition: background-color 200ms var(--ease-out-quad), 
+              color 200ms var(--ease-out-quad), 
+              opacity 200ms var(--ease-out-quad);
+}
+
+/* Input styling */
+input, textarea {
+  font-family: inherit;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Checkbox animation */
+@keyframes check-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes check-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.animate-check-in {
+  animation: check-in 150ms var(--ease-out-quart) forwards;
+}
+
+.animate-check-out {
+  animation: check-out 100ms var(--ease-out-quad) forwards;
+}
+
+/* Button press effect */
+.btn-press {
+  transition: transform 100ms var(--ease-out-quad);
+}
+
+.btn-press:active {
+  transform: scale(0.98);
+}
