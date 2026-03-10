@@ -6,7 +6,7 @@
 
 Break down big dreams into small, achievable steps. Track progress. Stay motivated. All private, all local.
 
-[![Open App](https://img.shields.io/badge/Open%20App-→-black?style=for-the-badge)](https://youryear.app)
+[![Open App](https://img.shields.io/badge/Open%20App-→-black?style=for-the-badge)](https://youryear-bice.vercel.app)
 ![Privacy](https://img.shields.io/badge/100%25%20Private-No%20Servers-green?style=flat-square)
 ![Local First](https://img.shields.io/badge/Data-Local%20Only-blue?style=flat-square)
 ![No Account](https://img.shields.io/badge/No%20Account-Required-orange?style=flat-square)
