@@ -1,3 +1,5 @@
+![Alt text](https://youryear-bice.vercel.app/og.png)
+
 # YourYear
 
 > **Your goals, organized.**
